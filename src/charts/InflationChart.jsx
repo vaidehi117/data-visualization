@@ -7,7 +7,7 @@ const InflationChart = () => {
 
   useEffect(() => {
     // Load the CSV file
-    d3.csv("/data/inflationData.csv").then((csvData) => {
+    d3.csv("/data/inflamationData.csv").then((csvData) => {
       // Process the data and convert numeric values from strings to numbers
       const processedData = csvData.map(d => {
         const yearData = {};
@@ -89,9 +89,13 @@ const InflationChart = () => {
     function zoomed(event) {
       const transform = event.transform;
       const newX = transform.rescaleX(x);
+
+      // Update the bars' x positions and widths based on the zoom level
       svg.selectAll(".bar")
-        .attr("x", d => newX(d.year))
-        .attr("width", newX.bandwidth());
+        .attr("x", d => newX(d.year)) // Rescale the x position
+        .attr("width", newX.bandwidth()); // Rescale the width of the bars
+
+      // Update the x-axis based on the new rescaled x scale
       svg.select(".x-axis").call(d3.axisBottom(newX));
     }
 
