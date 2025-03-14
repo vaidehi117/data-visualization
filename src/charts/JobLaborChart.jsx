@@ -15,7 +15,7 @@ const JobLaborChart = () => {
       .style("height", "auto")
       .style("overflow", "visible");
 
-    d3.csv("/jobData.csv").then(data => {
+    d3.csv("/data/jobData.csv").then(data => {
       data.forEach(d => {
         d.Year = +d.Year;
         d.Employed = +d.Employed;

@@ -38,7 +38,7 @@
 }
 
 .chart-container {
-  width: 60%;  
+  width: 80%;  
   max-width: 600px;
   margin: 20px auto;
   padding: 15px;
@@ -61,5 +61,48 @@
 /* If using Chart.js, ensure the axis labels are visible */
 .chart-container .chartjs-render-monitor {
   color: #333 !important; /* Forces axis text color */
+}
+
+/* General styling for the paragraph container */
+p {
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 80%;
+  background-color: #f9f9f9; /* Light gray background */
+  border-left: 5px solid #007bff; /* Blue left border for emphasis */
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #333;
+}
+
+/* Styling for the list items */
+p li {
+  list-style: none; /* Remove default bullets */
+  padding: 10px;
+  margin: 8px 0;
+  background-color: #ffffff; /* White background for contrast */
+  border-radius: 6px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Adding a custom bullet point */
+p li::before {
+  content: "\2022"; /* Unicode for bullet point */
+  color: #007bff; /* Blue color */
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 8px; /* Space between bullet and text */
+}
+
+/* Hover effect to make it interactive */
+p li:hover {
+  transform: translateX(5px);
+  background-color: #eef4ff;
 }
 
