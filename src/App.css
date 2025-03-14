@@ -37,8 +37,9 @@
   }
 }
 
+/* Chart container styling */
 .chart-container {
-  width: 80%;  
+  width: 80%;
   max-width: 600px;
   margin: 20px auto;
   padding: 15px;
@@ -58,7 +59,7 @@
   font-weight: bold;
 }
 
-/* If using Chart.js, ensure the axis labels are visible */
+/* Ensure chart labels are visible */
 .chart-container .chartjs-render-monitor {
   color: #333 !important; /* Forces axis text color */
 }
@@ -74,35 +75,59 @@ p {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   font-size: 16px;
   color: #333;
+  line-height: 1.8; /* Adjust line height for readability */
 }
 
-/* Styling for the list items */
-p li {
+/* Styling for the list */
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
   list-style: none; /* Remove default bullets */
-  padding: 10px;
+  padding: 12px 20px;
   margin: 8px 0;
-  background-color: #ffffff; /* White background for contrast */
+  background-color: #333131; /* White background for contrast */
   border-radius: 6px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px; /* Increased space between bullet and text */
   transition: transform 0.2s ease-in-out;
+  cursor: pointer; /* Makes it clickable for interactivity */
 }
 
-/* Adding a custom bullet point */
-p li::before {
+/* Custom bullet point */
+ul li::before {
   content: "\2022"; /* Unicode for bullet point */
   color: #007bff; /* Blue color */
   font-weight: bold;
-  font-size: 18px;
-  margin-right: 8px; /* Space between bullet and text */
+  font-size: 24px; /* Larger bullet point */
+  margin-right: 15px; /* Space between bullet and text */
 }
 
-/* Hover effect to make it interactive */
-p li:hover {
-  transform: translateX(5px);
-  background-color: #eef4ff;
+/* Hover effect for list items */
+ul li:hover {
+  transform: translateX(5px); /* Slight movement on hover */
+  background-color: #0f5cea; /* Light blue background on hover */
+}
+
+/* Icon styling (if needed) */
+ul li i {
+  color: #007bff;
+  margin-right: 10px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  p {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+  ul li {
+    font-size: 14px; /* Smaller font size for list items */
+    padding: 10px 15px;
+  }
 }
 
