@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+.chart-container {
+  width: 60%;  
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 2px solid #ddd; /* Softer border for a cleaner look */
+  border-radius: 10px;
+  background-color: #ffffff; /* Ensures high contrast */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds depth */
+}
+
+.chart-container canvas {
+  background-color: #ffffff; /* Ensures the chart background is light */
+}
+
+.chart-container text {
+  fill: #333; /* Ensures text is dark and visible */
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* If using Chart.js, ensure the axis labels are visible */
+.chart-container .chartjs-render-monitor {
+  color: #333 !important; /* Forces axis text color */
+}
+
