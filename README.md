@@ -36,6 +36,9 @@ The visualizations are powered by real-world data from reputable sources:
    - Format: Inflation visualization showing price changes since 2020
 
 
+## Link to presantation:
+- https://docs.google.com/presentation/d/13fs1ZWPgx2MnJLaJhiMnYHYtHAHKyemX6NF3uc1iJpA/edit#slide=id.g34419bb9c6a_0_442
+
 ## Future Enhancements
 - Add additional datasets for more comprehensive economic analysis
 - Implement advanced filtering options
